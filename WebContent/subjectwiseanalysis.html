@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="style2.css" type="text/css" media="all" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/TableBarChart.js"></script>
+	<link rel="stylesheet" href="css/TableBarChart.css" />
+	<style type="text/css">
+
+		table {
+			border-collapse: collapse;
+		}
+		caption {
+			background: #D3D3D3;
+		}
+		th {
+			background: #A7C942;
+			border: 1px solid #98BF21;
+			color: #ffffff;
+			font-weight: bold;
+			text-align: left;
+		}
+		td {
+			border: 1px solid #98BF21;
+			text-align: left;
+			font-weight: normal;
+			color: #000000;
+		}
+		tr:nth-child(odd) {
+			background: #ffffff;
+		}
+		tbody tr:nth-child(odd) th {
+			background: #ffffff;
+			color: #000000;
+		}
+		tr:nth-child(even) {
+			background: #EAF2D3;
+		}
+		tbody tr:nth-child(even) th {
+			background: #EAF2D3;
+			color: #000000;
+		}
+		#target {
+			width: 600px;
+			height: 400px;
+		}
+	</style>
+
+</head>
+
+<body>
+<div class="header-cont">
+  <h2 align="center" style="color:#FFF; background-color:#03F; ; font-size:38px;">ONLINE TEST SERIES </h2>
+  </div>
+  <p> </p>
+  <p></p>
+<div align="center">
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+  <p>&nbsp;</p>
+	<table id="source">
+		<caption>
+		Subject wise analysis
+		</caption>
+		<thead>
+			<tr>
+				<th width="94"></th>
+				<th width="51">Test 1</th>
+				<th width="48">Test 2</th>
+				<th width="44">Test 3</th>	
+                <th width="48">Test 4</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Mathematics</th>
+				<td>20</td>
+				<td>13</td>
+				<td>12</td>
+                <td>17</td>
+			</tr>
+			<tr>
+				<th>physics</th>
+				<td>34</td>
+				<td>11</td>
+				<td>06</td>
+                <td>06</td>
+			</tr>
+			<tr>
+				<th>Chemistry</th>
+				<td>11</td>
+				<td>12</td>
+				<td>16</td>
+                <td>04</td>
+			</tr>
+			
+		</tbody>
+	</table>
+    </div>
+	<div id="target">
+	</div>
+
+<script type="text/javascript">
+	$(function() {
+		$('#source').tableBarChart('#target', '', false);
+	});
+</script>
+<div>
+<footer>
+  <div class="footerlink">
+    <p class="lf">Copyright &copy; 2014 VTeam - All Rights Reserved</p>
+    <p class="rf">&nbsp;</p>
+    <div style="clear:both;"></div>
+  </div>
+</footer>
+</body>
+</html>

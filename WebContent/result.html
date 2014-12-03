@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="js/Chart.js"></script>
+
+<link rel="stylesheet" href="style2.css" type="text/css" media="all" />
+</head>
+
+<body>
+<div class="header-cont">
+    <h2 align="center" style="color:#FFF; background-color:#03F; ; font-size:38px;">ONLINE TEST SERIES</h2>
+</div>
+  <div>
+  
+<h3 align="center" style="color:#F00">&nbsp;</h3>
+<h3 align="center" style="color:#F00">&nbsp;</h3>
+<h3 align="center" style="color:#F00">&nbsp;</h3>
+<h3 align="center" style="color:#F00">Test analysis</h3>
+</div>
+  <div align="right">
+ <label algin="right"> <a href="subjectwiseanalysis.html" >click here for subject wise analysis</a></label>
+ </div>
+ <div align="center" >
+ <table id="source" align="center" bgcolor="#66CC33">
+		
+		<thead>
+			<tr>
+				<th width="88"></th>
+				<th width="53">correct answers</th>
+				<th width="75">wrong answers</th>
+				<th width="75">Total marks </th>	
+                
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>Test-1</th>
+				<td>20</td>
+				<td>13</td>
+				<td>12</td>
+                
+			</tr>
+			
+		</tbody>
+	</table>
+    </div>
+ <div id="canvas-holder">
+			<canvas id="chart-area" width="50" height="50"/>
+		</div>
+
+
+	<script>
+
+		var doughnutData = [
+				
+				{
+					value: 50,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "answerd"
+				},
+				{
+					value: 40,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "wrong answers "
+				},
+				{
+					value: 10,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "notattempted"
+				},
+				{
+					value: 00,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "Grey"
+				},
+				{
+					value: 00,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Dark Grey"
+				}
+
+			];
+
+			window.onload = function(){
+				var ctx = document.getElementById("chart-area").getContext("2d");
+				window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+			};
+
+
+
+	</script>
+	
+<footer>
+  <div class="footer-link">
+    <p class="lf">Copyright &copy; 2014 VTeam - All Rights Reserved</p>
+    <p class="rf">&nbsp;</p>
+    <div style="clear:both;"></div>
+  </div>
+</footer>
+</body>
+</html>
