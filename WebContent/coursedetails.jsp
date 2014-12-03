@@ -101,7 +101,7 @@ All Full Length Tests have a fixed last date to give the test, after which the r
 <p>Flexibility of choosing any 6 FLT's from a list of scheduled FLT's.</p></td>
 </tr><tr><td width="174">
 <h3> Fee Details :</h3></td><td><h3> 3500</h3></td></tr>
-<tr><form action="paymentdetails.jsp"><td><input type="hidden" name="price" value="3500"></td>
+<tr><form action="paymentdetails.jsp"><td><input type="hidden" name="price" value="3500"><input type="hidden" name="course" value="iit-jee advance"></td>
 <td><input type="submit" value="proceed" ></td></form></tr>
 <%
 }
@@ -115,7 +115,7 @@ All Full Length Tests have a fixed last date to give the test, after which the r
 <p>Flexibility of choosing any 6 FLT's from a list of scheduled FLT's.</p></td>
 </tr><tr><td width="174">
 <h3> Fee Details :</h3></td><td><h3> 1500</h3></td></tr>
-<tr><form action="paymentdetails.jsp"><td><input type="hidden" name="price" value="1500"></td>
+<tr><form action="paymentdetails.jsp"><td><input type="hidden" name="price" value="1500"><input type="hidden" name="course" value="jee main"></td>
 <td><input type="submit" value="proceed" ></td></form></tr>
 <%
 }else if(cname.equals("bitsat"))
@@ -128,7 +128,7 @@ All Full Length Tests have a fixed last date to give the test, after which the r
 <p>Flexibility of choosing any 6 FLT's from a list of scheduled FLT's.</p></td>
 </tr><tr><td width="174">
 <h3> Fee Details :</h3></td><td><h3> 1500</h3></td></tr>
-<tr><form action="paymentdetails.jsp"><td><input type="hidden" name="price" value="1500"></td>
+<tr><form action="paymentdetails.jsp"><td><input type="hidden" name="price" value="1500"><input type="hidden" name="course" value="bitsat"></td>
 <td><input type="submit" value="proceed" ></td></form></tr>
 <%
 }else if(cname.equals("iit-jeemain_advance"))
@@ -141,7 +141,8 @@ All Full Length Tests have a fixed last date to give the test, after which the r
 <p>Flexibility of choosing any 6 FLT's from a list of scheduled FLT's.</p></td>
 </tr><tr><td width="174">
 <h3> Fee Details :</h3></td><td><h3> 5000</h3></td></tr>
-<tr><form action="paymentdetails.jsp"><td><input type="hidden" name="course" value="iit-jeemain_advance"><input type="hidden" name="price" value="5000"></td>
+<tr><form action="paymentdetails.jsp"><td><input type="hidden" name="course" value="iit-jeemain_advance"><input type="hidden" name="price" value="5000">
+<input type="hidden" name="course" value="iit-jeemain_advance"></td>
 <td><input type="submit" value="proceed" ></td></form></tr>
 <%
 }else if(cname.equals("all"))
