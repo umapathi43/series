@@ -87,13 +87,15 @@
         <div class="img-box">
           <p align="left">&nbsp;</p>
           <%
-          float price=Float.parseFloat(request.getParameter("price"));
+          String p=request.getParameter("price");
+          int price=Integer.parseInt(p);
         		  String course=request.getParameter("course");
-      			float  cfees=70.00f;
+      			int  cfees=70;
       			float tprice=cfees+price;
       			
         	
           %>
+          <form method="post" action="paymentgateway.jsp">
                   <table width="470"  bordercolor="#FFFF66" align="center" style="border-bottom-color:#696" >
   <caption> Course Fee Details<br>
   <br>
@@ -119,7 +121,12 @@
     <td align="right"><%out.println(tprice);%></td>
    
   </tr>
+  <tr>
+  <td colspan="3" align="right" height="45">
+  <input type="submit" name="paynow" value="paynow" size="20" spry:hover="buttonStyle" style="background-color:#0C0" >
+  </td></tr>
 </table>
+</form>
         </div>
         <p class="p0">&nbsp;</p>
       </div>
