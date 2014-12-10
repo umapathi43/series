@@ -1,3 +1,16 @@
+<%-- 
+    Document   : homepage.jsp
+    Created on : Dec 10, 2014, 12:09:24 PM
+    Author     : uma
+--%>
+
+<%@page import="java.io.OutputStream"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="java.sql.Blob"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +52,67 @@
       <p>&nbsp;</p>
       <h3>User Details </h3>
       <ul class="categories">
-        <li><span><a href="basicinformation.html">Basic Information</a></span></li>
+        <li><span>
+                <%
+      Blob image = null;
+
+Connection con = null;
+
+byte[ ] imgData = null ;
+
+Statement stmt = null;
+ResultSet rs = null;
+
+        try { Class.forName("com.mysql.jdbc.Driver");
+
+        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/testseries","root","9700275521");
+
+        stmt = con.createStatement();
+
+        rs = stmt.executeQuery("select image from testseries.registration where emailid='umapathib.tech@gmail.com'");
+
+        if (rs.next()) { image = rs.getBlob(1);
+
+                  imgData = image.getBytes(1,(int)image.length());
+
+        } else {
+
+        out.println("Display Blob Example");
+
+        out.println("image not found for given id>"); 
+        return;
+
+        }
+
+        // display the image
+
+            response.setContentType("image/png");
+
+            OutputStream o = response.getOutputStream();
+         %>
+                <%
+            o.write(imgData);
+                o.flush();
+
+            o.close();
+
+} 
+catch (Exception e) {
+
+        out.println("Unable To Display image");
+
+       out.println("Image Display Error=" + e.getMessage());
+
+        return; 
+       } 
+
+
+rs.close();
+stmt.close();
+con.close();
+      %>
+                
+                </span></li>
         <li><span><a href="register.html">Registration </a></span></li>
         <li><span><a href="syllabus.html">IIT-JEE ADVANCE SYLLABUS</a></span></li>
         <li><span><a href="jeemainsyllabus.html">JEE MAIN SYLLABUS</a></span></li>
@@ -363,6 +436,9 @@
     </section>
   </div>
 </div>
+      <% 
+%> 
+     
 <footer>
   <div class="footerlink">
     <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>

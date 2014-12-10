@@ -6,15 +6,6 @@
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 <script type="text/javascript" src="js/jquery-1.4.2.min.js" ></script>
- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/jquery-1.10.2.js"></script>
-<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script>
-$(function() {
-$( "#datepicker" ).datepicker();
-});
-</script>
 <script type="text/javascript" src="js/cufon-yui.js"></script>
 <script type="text/javascript" src="js/cufon-replace.js"></script>
 <script type="text/javascript" src="js/Myriad_Pro_300.font.js"></script>
@@ -33,6 +24,72 @@ $( "#datepicker" ).datepicker();
 	color: #008cc4;
 }
 
+.jeemainlogin {
+	background-color:#007dc1;
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+	border:2px solid #124d77;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:25px;
+	padding:18px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #154682;
+}
+.jeemainlogin:hover {
+	background-color:#0061a7;
+}
+.jeemainlogin:active {
+	position:relative;
+	top:1px;
+}
+.jeeadvance {
+	background-color:#89c403;
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+	border:2px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:25px;
+	padding:18px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+}
+.jeeadvance:hover {
+	background-color:#77a809;
+}
+.jeeadvance:active {
+	position:relative;
+	top:1px;
+}
+.bitsatlogin {
+	background-color:#c123de;
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+	border:2px solid #a511c0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:arial;
+	font-size:25px;
+	padding:18px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #9b14b3;
+}
+.bitsatlogin:hover {
+	background-color:#a20dbd;
+}
+.bitsatlogin:active {
+	position:relative;
+	top:1px;
+}
 
 a.buttonStyle:hover {
          background: #383;
@@ -105,89 +162,37 @@ a.buttonStyle:hover {
       </div>
       
     <div class="inside">
- <form  method="post" action="coursedetails.jsp" name="register">
-  <table width="700" border="0">
-  <tr>
-    <th height="44" colspan="2"><h3>REGISTRATION PAGE</h3></th>
-    </tr>
-  <tr>
-    <th width="295" height="44" align="right">Full Name*:	 </th>
-    <td width="395"><input type="text" name="username" height="25" size="30" placeholder="please Enter your Full name" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295" height="44" align="right">Father's  Name*:	 </th>
-    <td width="395"><input type="text" name="fname" height="25" size="30" placeholder="please Enter your Father name" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295" height="41" align="right">Address 1 * :	 </th>
-    <td width="395"><input type="text" name="address1" height="25" size="30" placeholder="please Enter your door no" style="color: #039; font-size:15px" ></td>
-  </tr>
-  
-  <tr>
-    <th width="295" height="41" align="right">Address 2 *:	 </th>
-    <td width="395"><input type="text" name="address2" height="25" size="30" placeholder="please Enter your street name" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295" height="44" align="right">Address 3 *:	 </th>
-    <td width="395"><input type="text" name="fname" height="25" size="30" placeholder="please Enter your City name" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295" align="right" height="41">Pincode *:	 </th>
-    <td width="395"><input type="text" name="pincode" height="25" size="30" placeholder="please Enter your pincode number" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295" height="43" align="right">Moblie Number *:	 </th>
-    <td width="395"><input type="text" name="mobileno" height="25" size="30" placeholder="please Enter your Father name" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295" height="41" align="right">E-mail id *:	 </th>
-    <td width="395"><input type="email" name="emailid" height="25" size="30" placeholder="please Enter your email id" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295" height="41" align="right">Choose your Password:	 </th>
-    <td width="395"><input type="password" name="password" height="25" size="30" placeholder="please Enter your password" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295" height="41" align="right">Choose your Password:	 </th>
-    <td width="395"><input type="password" name="password" height="25" size="30" placeholder="please Re-type your password" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295" height="41" align="right">College  Name*:	 </th>
-    <td width="395"><input type="text" name="cname" height="25" size="30" placeholder="please Enter your College name" style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-    <th width="295"  height="41" align="right">image *:	 </th>
-    <td width="395"><input type="file" name="image" height="25" size="30" placeholder="please browse your image " style="color: #039; font-size:15px" ></td>
-  </tr>
-  <tr>
-  <th width="295" height="41" align="right">Date of Birth</th>
-  <td><input type="text" id="datepicker"></td>
-  </tr>
-  <tr>
-    <th width="295"  height="41"align="right">Select course*:	 </th>
-    <td width="395"><label>
-      <select name="coursename">
-      <option value="default">choose ur course</option>
-      <option value="iit-jee advance">itt-jee advance</option>
-      <option value="jee main"> jee-main</option>
-      <option value="bitsat">bitsat</option>
-      <option value="iit-jeemain_advance">iit-jee main+ advance</option>
-            <option value="all">iit-jee main+ advance + bitsat</option>
-
-      </select>
-    </label></td> 
-    </tr>
-  <tr>
-    <th colspan="2" height="41" ><input name="signIn" value="Register" type="submit"  style="height:30px; font-size:14pt;background-color: #3CF; "id="signIn" class="buttonStyle"></th>
-  </tr>
-  
-</table>
-
- </form>
+ 
 <p class="p0"><em><strong> </strong></em>	</p>
+<form action="servlet/Search">  
+<table width="650" border="0" style=" background-color:#CCC">
+  <tr>
+    <th height="44" colspan="2"><h2 style="background-color: #FFF; color:#000">LOGIN PAGE</h2> </th>
+    
+  </tr>
+  <tr>
+  <th><img src="images/avatar_2x.png" alt="Mountain View" style="width:120px;height:90px"></th>
+  <tr><th width="306"></th></tr>
+  
+  <tr>
+    <th height="41"  colspan="2"><input id="email"  style="color:#03C ; height:30px; font-size:14pt;"size="30" name="email" placeholder="Enter your Email" type="text">
+         
+          </th>
+  </tr>
+  <tr>
+    <th height="42" colspan="2"><input id="pwd" size="30" style="color:#03C ; height:30px; font-size:14pt;" name="usrpwd" placeholder="Enter your Password" type="password"></th>
+    
+  </tr>
+  <tr>
+    <th colspan="2"><input name="signIn" value="Sign In" type="submit"  style="height:30px; font-size:14pt;background-color: #3CF;" class="buttonStyle"></th>
+    
+  </tr>
+</table>
+</form>
 <form id="myform" method="post" action="loginform">
+
   <br/>
-<br/>
+<br />
 
 <br>
 </form>
