@@ -23,7 +23,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author uma
  */
-public class BitsatLogin extends HttpServlet {
+public class JeeMainLogin extends HttpServlet {
 public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -47,7 +47,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
                         out.println("hi");
            connect = DriverManager.getConnection(url+dbName,userName,password);
            out.println("hi");
-			out.println(email);
+			
 			PreparedStatement ps=connect.prepareStatement("select * from testseries.registration where emailid=?");
 			out.println("hi");
                         ps.setString(1,email);
@@ -72,14 +72,14 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
 			if(b)
 			{
                             HttpSession session=request.getSession();
-                            session.setAttribute("name",email);
-			    response.sendRedirect("./bitsathomepage.jsp");	
+		session.setAttribute("name",email);
+			    response.sendRedirect("./jeemainhomepage.jsp");	
                             //out.print("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td></tr>");
 				
 			}
                         else
                         {
-                           response.sendRedirect("./notregisteruser.html");
+                            response.sendRedirect("./notregisteruser.html");
                         }
 			out.print("</table>");
 			
@@ -88,5 +88,4 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
 		finally{out.close();}
 	}
 
-  
 }

@@ -20,6 +20,18 @@
         <servlet-name>BitsatLogin</servlet-name>
         <servlet-class>com.onlinetestseries.BitsatLogin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>JeeMainLogin</servlet-name>
+        <servlet-class>com.onlinetestseries.JeeMainLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>com.onlinetestseries.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>com.onlinetestseries.ProfileServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>JeeLoginServlet</servlet-name>
         <url-pattern>/JeeLoginServlet</url-pattern>
@@ -39,6 +51,18 @@
     <servlet-mapping>
         <servlet-name>BitsatLogin</servlet-name>
         <url-pattern>/BitsatLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JeeMainLogin</servlet-name>
+        <url-pattern>/JeeMainLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/ProfileServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

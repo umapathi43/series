@@ -17,6 +17,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -67,12 +68,19 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
 			out.print("</tr>");
 			
 			/* Printing result */
-			while(rs.next())
+                        boolean b=rs.next();
+			if(b)
 			{
-			    response.sendRedirect("./homepage.jsp");	
+                            HttpSession session=request.getSession();
+		session.setAttribute("name",email);
+			    response.sendRedirect("./jeeadvancehomepage.jsp");	
                             //out.print("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td></tr>");
 				
 			}
+                        else
+                        {
+                            response.sendRedirect("./notregisteruser.html");
+                        }
 			out.print("</table>");
 			
 		}catch (Exception e2) {e2.printStackTrace();}

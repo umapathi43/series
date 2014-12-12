@@ -67,11 +67,17 @@ public void doGet(HttpServletRequest request, HttpServletResponse response)
 			out.print("</tr>");
 			
 			/* Printing result */
-			while(rs.next())
+			 boolean b=rs.next();
+			if(b)
 			{
-				out.print("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td></tr>");
+			    response.sendRedirect("./jeemainhomepage.jsp");	
+                            //out.print("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td></tr>");
 				
 			}
+                        else
+                        {
+                            out.println("your are not register user please register here ");
+                        }
 			out.print("</table>");
 			
 		}catch (Exception e2) {e2.printStackTrace();}
