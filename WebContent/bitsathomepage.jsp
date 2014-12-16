@@ -66,6 +66,18 @@
 </head>
 <body id="page1">
 <!-- START PAGE SOURCE -->
+<%
+    
+    String s;
+    s=(String)session.getAttribute("name");
+    if(s==null){
+        %><div><h2>Your not register user please register and login</h2></div><%
+                    response.sendRedirect("./notuser.html");
+                }else 
+                {
+ %>
+                
+                    
 <div class="wrap">
   <header>
     <div class="umaheader">
@@ -84,7 +96,7 @@
       <p>&nbsp;</p>
       <h3>User Details </h3>
       <ul class="categories">
-        <li><span><%= session.getAttribute("name") %></span></li>
+        <li><span><%= s %></span></li>
         <li><span><a href="register.html">Registration </a></span></li>
         <li><span><a href="syllabus.html">IIT-JEE ADVANCE SYLLABUS</a></span></li>
         <li><span><a href="jeemainsyllabus.html">JEE MAIN SYLLABUS</a></span></li>
@@ -408,7 +420,8 @@
     </section>
   </div>
 </div>
-<footer>
+       
+<footer
   <div class="footerlink">
     <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
     <p class="rf">Design by <a href="http://www.templatemonster.com/">TemplateMonster</a></p>
@@ -416,6 +429,9 @@
   </div>
 </footer>
 <script type="text/javascript"> Cufon.now(); </script>
+ <% 
+                }
+        %>
 <!-- END PAGE SOURCE -->
 </body>
 </html>

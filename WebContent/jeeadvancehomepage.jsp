@@ -66,6 +66,16 @@
 </head>
 <body id="page1">
 <!-- START PAGE SOURCE -->
+<%
+    
+    String s;
+    s=(String)session.getAttribute("name");
+    if(s==null){
+        %><div><h2>Your not register user please register and login</h2></div><%
+                    response.sendRedirect("./notuser.html");
+                }else 
+                {
+ %>
 <div class="wrap">
   <header>
     <div class="umaheader">
@@ -410,12 +420,15 @@
 </div>
 <footer>
   <div class="footerlink">
-    <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
+    <p class="lf">Copyright &copy; 2014 <a href="#">SiteName</a> - All Rights Reserved</p>
     <p class="rf">Design by <a href="http://www.templatemonster.com/">TemplateMonster</a></p>
     <div style="clear:both;"></div>
   </div>
 </footer>
 <script type="text/javascript"> Cufon.now(); </script>
 <!-- END PAGE SOURCE -->
+<% 
+                }
+        %>
 </body>
 </html>

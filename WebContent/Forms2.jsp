@@ -1,3 +1,10 @@
+<%-- 
+    Document   : Forms2
+    Created on : Dec 14, 2014, 12:20:36 PM
+    Author     : uma
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
 <!--[if IE 9]>					<html class="ie9 no-js" lang="en-US">  <![endif]-->
@@ -117,6 +124,8 @@
 					</div><!--/ .row-->
 
 					<form action="./Form3.jsp" role="form">
+                                            <input type="hidden" name="password" value="<%=request.getParameter("password")%>">
+
 
 						<div class="form-wizard">
 							
@@ -292,7 +301,7 @@
 										<div class="col-md-4 col-sm-4">
 											<fieldset class="input-block">
 												<label for="pincode">Pin Code</label>
-												<input id="zip-code" placeholder="Code" required="" type="text" name="zipcode">
+												<input id="pincode" placeholder="Code" required="" type="text" name="pincode">
 												<div class="tooltip">
 													<p>
 														<b>Why do we need this info?</b>
@@ -352,8 +361,8 @@
 										
 										<div class="col-md-12 col-sm-12">
 											<fieldset class="input-block">
-												<label for="phone">Phone</label>
-												<input id="phone" class="form-icon form-icon-phone" placeholder="Enter Your Mobile Number" required="" type="text" name="moblieno">
+												<label for="phone">Mobile No</label>
+												<input id="phone" class="form-icon form-icon-phone" placeholder="Enter Your Mobile Number" required="" type="text" name="mobileno">
 												<div class="tooltip">
 													<p>
 														<b>Why do we need this info?</b>
